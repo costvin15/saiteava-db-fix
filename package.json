@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "mysql2": "^2.2.5",
+    "sucrase": "^3.17.1"
+  },
+  "scripts": {
+    "start": "sucrase-node main.js"
+  }
+}
