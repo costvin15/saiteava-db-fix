@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import mysql from 'mysql2/promise'
 
 const getField = async ({connection}) => {
@@ -25,10 +26,10 @@ const setAnswers = async ({user, field, connection}) => {
 (async () => {
   console.log('Criando conexão com banco de dados')
   const connection = await mysql.createConnection({
-    host: 'localhost',
-    user: 'user',
-    password: 'password',
-    database: 'moodle',
+    host: process.env.HOST,
+    user: process.env.USERNAME,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE,
   })
 
   console.log('Conectando...')
